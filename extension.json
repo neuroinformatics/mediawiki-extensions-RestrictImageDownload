@@ -1,0 +1,29 @@
+{
+  "name": "RestrictImageDownload",
+  "version": "0.0.1",
+  "author": [
+    "Yoshihiro Okumura"
+  ],
+  "url": "https://github.com/neuroinformatics/mediawiki-extensions-RestrictImageDownload",
+  "description": "Restrict image file download",
+  "license-name": "MIT",
+  "requires": {
+    "MediaWiki": ">= 1.39.0"
+  },
+  "type": "other",
+  "config": {
+    "RestrictImageFiles": {
+      "value": [],
+      "merge_strategy": "provide_default"
+    }
+  },
+  "AutoloadNamespaces": {
+    "MediaWiki\\Extension\\RestrictImageDownload\\": "includes/"
+  },
+  "Hooks": {
+    "ThumbnailBeforeProduceHTML": "MediaWiki\\Extension\\RestrictImageDownload\\Hooks::onThumbnailBeforeProduceHTML",
+    "LinkerMakeMediaLinkFile": "MediaWiki\\Extension\\RestrictImageDownload\\Hooks::onLinkerMakeMediaLinkFile",
+    "BeforePageDisplay": "MediaWiki\\Extension\\RestrictImageDownload\\Hooks::onBeforePageDisplay"
+  },
+  "manifest_version": 2
+}
