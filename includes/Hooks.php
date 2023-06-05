@@ -9,7 +9,7 @@ class Hooks
     /**
      * Hook: ThumbnailBeforeProduceHTML.
      */
-    public static function onThumbnailBeforeProduceHTML(\ThumbnailImage $thumbnail, array &$attribs, /* array | bool */ &$linkAttribs)
+    public static function onThumbnailBeforeProduceHTML(\ThumbnailImage $thumbnail, array &$attribs, array | bool &$linkAttribs)
     {
         global $wgUploadPath;
         global $wgRestrictImageFiles;
